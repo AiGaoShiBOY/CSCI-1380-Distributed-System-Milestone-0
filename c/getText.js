@@ -9,12 +9,15 @@ const rl = readline.createInterface({
   input: process.stdin,
 });
 
-// TODO Add some code
+let document = "";
 
 rl.on('line', (line) => {
-  // TODO Add some code
+  document += line;
 });
 
 rl.on('close', () => {
-  // TODO Add some code
+  const text = convert(document, {
+    wordwrap: null
+  });
+  console.log(text);
 });

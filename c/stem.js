@@ -4,6 +4,7 @@
 
 var readline = require('readline');
 var natural = require('natural');
+let stemmer = natural.PorterStemmer; 
 
 var rl = readline.createInterface({
   input: process.stdin,
@@ -12,5 +13,6 @@ var rl = readline.createInterface({
 });
 
 rl.on('line', function (line) {
-  // TODO some code
+  const stemmedLine = stemmer.stem(line);
+  console.log(stemmedLine);
 });
