@@ -1,5 +1,6 @@
-# test different types of url input
 #!/bin/bash
+# test different types of url input
+
 T_FOLDER=${T_FOLDER:-t}
 R_FOLDER=${R_FOLDER:-}
 
