@@ -18,9 +18,9 @@ fi
 url="https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/index.html"
 
 if $DIFF <(cat "$T_FOLDER"/d/d0.txt | c/getURLs.js $url | sort) <(sort "$T_FOLDER"/d/d1.txt) >/dev/null; then
-  echo "$0 success: URL sets are identical"
+  echo "$0 success: URL with html passed"
 else
-  echo "$0 failure: URL sets are not identical"
+  echo "$0 failure: URL with html failed"
 fi
 
 url="https://cs.brown.edu/courses/csci1380/sandbox/1/level_1a/"
