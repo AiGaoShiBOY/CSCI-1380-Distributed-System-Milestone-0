@@ -4,14 +4,21 @@
 
 mapfile -t ngrams
 
-declare -A counts
 
+declare -A counts
 
 # update hashset
 for ngram in "${ngrams[@]}"; do
     ((counts["$ngram"]++))
 done
 
-echo "${!counts[@]}" | tr ' ' '\n' | sort | while read -r gram; do
+
+for key in "${!counts[@]}"; do
+    echo "$key"
+done | sort | while read -r gram; do
     echo "$gram | ${counts[$gram]} | $1"
-done
+done 
+
+# echo "${!counts[@]}" | tr ' ' '\n' | sort | while read -r gram; do
+#     echo "$gram | ${counts[$gram]} | $1"
+# done
