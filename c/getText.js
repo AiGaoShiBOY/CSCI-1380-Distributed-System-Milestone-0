@@ -12,7 +12,7 @@ const rl = readline.createInterface({
 let document = "";
 
 rl.on('line', (line) => {
-  document += line;
+  document += line + "\n";
 });
 
 rl.on('close', () => {
