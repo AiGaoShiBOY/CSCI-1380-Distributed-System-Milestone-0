@@ -4,15 +4,15 @@
 
 var readline = require('readline');
 var natural = require('natural');
-let stemmer = natural.PorterStemmer; 
+let stemmer = natural.PorterStemmer;
 
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  terminal: false
+  terminal: false,
 });
 
-rl.on('line', function (line) {
+rl.on('line', function(line) {
   const stemmedLine = stemmer.stem(line);
   console.log(stemmedLine);
 });

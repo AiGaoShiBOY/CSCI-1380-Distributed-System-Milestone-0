@@ -2,22 +2,22 @@
 
 // Extract text from a web page
 
-const { convert } = require('html-to-text');
+const {convert} = require('html-to-text');
 const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
 });
 
-let document = "";
+let document = '';
 
 rl.on('line', (line) => {
-  document += line + "\n";
+  document += line + '\n';
 });
 
 rl.on('close', () => {
   const text = convert(document, {
-    wordwrap: null
+    wordwrap: null,
   });
   console.log(text);
 });
